@@ -33,11 +33,17 @@ public class GetDishesEndpoint : EndpointWithoutRequest <IEnumerable<ResponseDto
     {
         Get("/dishes");
         Description(builder => builder
-            .Produces(404)
-            .Produces(400)
-            .ProducesValidationProblem()
             .Produces(500));
         Version(1);
         AllowAnonymous();
+    }
+    
+    private class CreatePanelEndpointSummary : Summary<GetDishesEndpoint>
+    {
+        public CreatePanelEndpointSummary()
+        {
+            Summary = "Get all dishes. No pagination";
+            Response(200, "OK");
+        }
     }
 }

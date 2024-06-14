@@ -42,12 +42,11 @@ public class AddDishEndpoint : Endpoint<RequestDto, ResponseDto, DishMapper>
         AllowAnonymous();
     }
 
-
     private class CreatePanelEndpointSummary : Summary<AddDishEndpoint>
     {
         public CreatePanelEndpointSummary()
         {
-            Summary = "Endpoint for create user panels";
+            Summary = "Create a dish";
             Description = "Created resource location can be found in header with \"Location\" key";
             Response(201, "Created");
         }

@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "milletest", "milletest\milletest.csproj", "{8D3E5021-4DBA-487A-B22E-0F534A8D9304}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{29BB8538-5184-4E0B-A634-F5DB8FE20B2D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "milletest.UnitTests", "milletest.UnitTests\milletest.UnitTests.csproj", "{4FCCC60D-1122-4866-BA2B-F8991C2BE447}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "milletest.IntegrationTests", "milletest.IntegrationTests\milletest.IntegrationTests.csproj", "{7B9E8143-037F-4FE1-AA9F-0623628E3E97}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8D3E5021-4DBA-487A-B22E-0F534A8D9304}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D3E5021-4DBA-487A-B22E-0F534A8D9304}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D3E5021-4DBA-487A-B22E-0F534A8D9304}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D3E5021-4DBA-487A-B22E-0F534A8D9304}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FCCC60D-1122-4866-BA2B-F8991C2BE447}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FCCC60D-1122-4866-BA2B-F8991C2BE447}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FCCC60D-1122-4866-BA2B-F8991C2BE447}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FCCC60D-1122-4866-BA2B-F8991C2BE447}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B9E8143-037F-4FE1-AA9F-0623628E3E97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B9E8143-037F-4FE1-AA9F-0623628E3E97}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B9E8143-037F-4FE1-AA9F-0623628E3E97}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B9E8143-037F-4FE1-AA9F-0623628E3E97}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4FCCC60D-1122-4866-BA2B-F8991C2BE447} = {29BB8538-5184-4E0B-A634-F5DB8FE20B2D}
+		{7B9E8143-037F-4FE1-AA9F-0623628E3E97} = {29BB8538-5184-4E0B-A634-F5DB8FE20B2D}
+	EndGlobalSection
+EndGlobal

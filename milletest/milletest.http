@@ -1,0 +1,6 @@
+@milletest_HostAddress = http://localhost:5265
+
+GET {{milletest_HostAddress}}/api/v1/dishes/
+Accept: application/json
+
+###

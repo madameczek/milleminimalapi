@@ -1,4 +1,3 @@
-using System.Net.Http.Json;
 using System.Text.Json;
 using FluentAssertions;
 using Microsoft.AspNetCore.Mvc.Testing;
@@ -20,18 +19,19 @@ public class GetDishesEndpointTests : IClassFixture<WebApplicationFactory<Progra
     }
 
     [Fact]
-    public async Task Test1()
+    public async Task Should_Return_Not_Empty_Data()
     {
         var httpClient = _factory.CreateClient();
 
         var response = await httpClient.GetAsync(RequestUri);
-        var deserialized = await httpClient.GetFromJsonAsync<IEnumerable<ResponseDto>>(RequestUri);
 
         response.EnsureSuccessStatusCode();
         response.Should().NotBeNull();
         var data = await JsonSerializer.DeserializeAsync<IEnumerable<ResponseDto>>(
             await response.Content.ReadAsStreamAsync(), _jsonSerializerOptions);
 
-        data.Should().NotBeEmpty();
+        var responseDtos = data as ResponseDto[] ?? data!.ToArray();
+        responseDtos.Should().NotBeEmpty();
+        responseDtos.First().Name.Should().NotBeNull();
     }
 }
